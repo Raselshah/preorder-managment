@@ -2,18 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-import Link from 'next/link';
+
 import { formatDateForInput } from '@/lib/utils';
 
-interface Preorder {
-  id: number;
-  name: string;
-  products: number;
-  preorderWhen: string;
-  startsAt: string;
-  endsAt: string | null;
-  isActive: boolean;
-}
 
 export default function PreorderDetailPage() {
   const router = useRouter();
