@@ -74,7 +74,7 @@ export async function GET(request: NextRequest) {
     });
 
     // Format response with ISO dates
-    const formattedPreorders: PreorderResponse[] = preorders.map(p => ({
+    const formattedPreorders: PreorderResponse[] = preorders.map((p: any) => ({
       ...p,
       startsAt: p.startsAt.toISOString(),
       endsAt: p.endsAt?.toISOString() || null,
